@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./style.css">
+    <title>Record</title>
+
+</head>
+
+<body>
+    <main></main>
+    <div class="wrapperMain">
+        <h2 class="recordName"></h2>
+        <h2 class="recordScore"></h2>
+    </div>
+    
+    </main>
+
+    <script>
+
+        var recordNameEl = document.querySelector(".recordName");
+        var recordScoreEl = document.querySelector(".recordScore");
+
+
+        function render() {
+
+            var lastUser = JSON.parse(localStorage.getItem("user"));        // deserialization and get object from local storage
+            console.log(lastUser);
+            if (lastUser === null) {
+                return;
+            } else {
+                recordNameEl.textContent = "Name : " + lastUser.name;
+                recordScoreEl.textContent = "Score : " + lastUser.score;
+            }
+
+        }
+        render();
+
+    </script>
+
+</body>
+
+</html>

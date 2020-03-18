@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz</title>
+
+    <!--Import-->
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+
+<body>
+
+    <div class="wrapperHead">
+        <div class="row">
+            <div class="align-middle mr-auto px-3">
+                <a href="record.html" class="">hight score</a>
+            </div>
+    
+            <div class="align-middle ml-auto px-3">
+                <p>Time : <span id="countDown"></span></p>
+            </div>
+        </div>
+    </div>
+
+    <main class="wrapperMain">
+
+        <div class="startContainer">            
+            <h1>
+                !! Quiz time !!
+            </h1>
+
+            <button id="startBtn">Start</button>
+        </div>
+
+        <div class="questionContainer hide">
+            <div id="question"></div>
+            <div class ="answer">
+            </div>
+        </div>
+
+        <div class="saveScore hide">
+            <form method="POST">
+                <h2 id="yourScore"></h2>
+                <h2>Enter your name</h2>                
+                <label><input type="text" id="inputName"></label>
+                <label><button id="saveRecord">Submit</button></label>
+            </form>
+        </div>
+    </main>
+    <script type="text/javascript" src="script.js"></script>
+</body>
+
+</html>
